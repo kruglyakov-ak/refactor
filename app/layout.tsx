@@ -1,12 +1,34 @@
 import { Metadata } from 'next'
+import { Manrope } from 'next/font/google'
+import 'shared/styles/globals.scss'
+
+import variables from 'shared/styles/theme/colors.module.scss'
+
+const manrope = Manrope({
+  subsets: ['latin', 'cyrillic'],
+  display: 'swap',
+  weight: ['400', '500', '600', '700'],
+})
 
 export const metadata: Metadata = {
   title: 'Mera Quant',
+  description:
+    'Instead of investing in a bitcoin, invest in an entire automated investment strategy inside your crypto exchange account.',
   viewport: {
     width: 'device-width',
     initialScale: 1,
   },
   icons: [{ rel: 'icon', url: '/favicon.ico' }],
+  themeColor: [
+    {
+      color: variables.darkBgSecondary,
+      media: 'prefers-color-scheme: dark',
+    },
+    {
+      color: variables.lightBgSecondary,
+      media: 'prefers-color-scheme: light',
+    },
+  ],
 }
 
 export default function RootLayout({
@@ -15,7 +37,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={manrope.className}
+    >
       <body>{children}</body>
     </html>
   )

@@ -1,0 +1,43 @@
+@use 'index.scss' as *;
+
+@import './theme/normalize.scss';
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a,
+input,
+button {
+  color: inherit;
+  text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  font-weight: $fw-medium;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--color-text);
+}

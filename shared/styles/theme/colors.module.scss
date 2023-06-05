@@ -1,0 +1,33 @@
+:root {
+  &.dark {
+    --color-text: #e4eef5;
+    --color-text-secondary: #8ea0ae;
+
+    --color-bg-primary: #173a54;
+    --color-bg-secondary: #081324;
+
+    --color-border: rgba(80, 195, 244, 0.24);
+
+    --shadow: 0px 19px 53px rgba(0, 0, 0, 0.59);
+  }
+
+  &.light {
+    --color-text: #4c728f;
+    --color-text-secondary: #6b8d98;
+
+    --color-bg-primary: #ffffff;
+    --color-bg-secondary: #e3eaeb;
+
+    --color-border: #b8d1df;
+
+    --shadow: 0px 8px 15px #a1b1b4;
+  }
+}
+
+$dark-bg-secondary: #081324;
+$light-bg-secondary: #e3eaeb;
+
+:export {
+  darkBgSecondary: $dark-bg-secondary;
+  lightBgSecondary: $light-bg-secondary;
+}
