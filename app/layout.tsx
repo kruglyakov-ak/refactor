@@ -1,10 +1,9 @@
 import { Metadata } from 'next'
 import { Manrope } from 'next/font/google'
 
-import { LandingLayout } from 'modules'
-
 import 'shared/styles/globals.scss'
 import colors from 'shared/styles/theme/colors.module.scss'
+
 import { Providers } from './providers'
 
 const manrope = Manrope({
@@ -45,9 +44,7 @@ export default function RootLayout({
       className={manrope.className}
     >
       <body>
-        <Providers>
-          <LandingLayout>{children}</LandingLayout>
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   )

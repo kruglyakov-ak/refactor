@@ -1,0 +1,21 @@
+@use 'shared/styles' as *;
+
+.logoLink {
+  display: inline-block;
+  width: 90px;
+  height: 65px;
+  position: relative;
+
+  & .logo {
+    & path {
+      fill: var(--color-text);
+    }
+  }
+
+  @include mobile {
+    & {
+      width: 65px;
+      height: 40px;
+    }
+  }
+}

@@ -1,3 +1,8 @@
+import { LandingLayout } from 'modules'
+
 export default function Home() {
-  return <div></div>
+  return (
+    <LandingLayout>
+    </LandingLayout>
+  )
 }
