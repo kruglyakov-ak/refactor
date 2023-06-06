@@ -3,6 +3,7 @@ import { FC, ReactNode } from 'react'
 import { Footer, Header } from 'modules'
 
 import s from './landingLayout.module.scss'
+import { MainLogo } from 'components'
 
 interface LandingLayoutProps {
   children: ReactNode
@@ -15,7 +16,7 @@ export const LandingLayout: FC<LandingLayoutProps> = ({
 }) => {
   return (
     <div className={s.wrapper}>
-      <Header />
+      <Header logo={<MainLogo />} />
       <main className={s.main}>
         {heading && <h1 className={s.title}>{heading}</h1>}
         {children}
