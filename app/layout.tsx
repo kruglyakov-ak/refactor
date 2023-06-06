@@ -1,8 +1,14 @@
+'use client'
+
 import { Metadata } from 'next'
 import { Manrope } from 'next/font/google'
-import 'shared/styles/globals.scss'
 
+import { LandingLayout } from 'modules'
+
+import 'shared/styles/globals.scss'
 import colors from 'shared/styles/theme/colors.module.scss'
+
+import { ThemeContextProvider } from 'store/Theme'
 
 const manrope = Manrope({
   subsets: ['latin', 'cyrillic'],
@@ -41,8 +47,11 @@ export default function RootLayout({
       lang="en"
       className={manrope.className}
     >
-      <body>{children}</body>
+      <ThemeContextProvider>
+        <body>
+          <LandingLayout>{children}</LandingLayout>
+        </body>
+      </ThemeContextProvider>
     </html>
   )
 }
-

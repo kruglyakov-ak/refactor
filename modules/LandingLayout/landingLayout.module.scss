@@ -1,0 +1,40 @@
+@use 'shared/styles' as *;
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-bg-secondary);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+
+  & .title {
+    margin: 0;
+    text-align: center;
+    font-size: 38px;
+    padding-top: 35px;
+  }
+
+  & .main {
+    flex-grow: 1;
+  }
+
+  @include laptop {
+    & .title {
+      padding-top: 24px;
+    }
+  }
+
+  @include tablet {
+    & .title {
+      font-size: 22px;
+    }
+  }
+
+  @include mobile {
+    & .title {
+      font-size: 20px;
+      padding-top: 10px;
+    }
+  }
+}

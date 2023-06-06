@@ -1,0 +1,132 @@
+@use 'shared/styles' as *;
+
+.wrapper {
+  position: relative;
+  background-color: transparent;
+  background-color: var(--color-bg-secondary);
+
+  &::before {
+    content: '';
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-border);
+  }
+
+  & .header {
+    height: 65px;
+    border-radius: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1530px;
+    padding: 0 15px;
+    margin: 0 auto;
+    white-space: nowrap;
+
+    & .leftContent {
+      display: flex;
+      align-items: center;
+      gap: 97px;
+
+      & .logo {
+        padding-right: 20px;
+      }
+    }
+
+    & .rightContent {
+      display: flex;
+      align-items: center;
+      gap: 89px;
+
+      & .pageMenu {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+  }
+
+  &.homePage:not(.menuShown) {
+    background-color: #173a54;
+    color: #e4eef5;
+
+    &::before {
+      background-color: rgba(80, 195, 244, 0.24);
+    }
+
+    & .header {
+      & .leftContent {
+        & svg rect {
+          fill: #e4eef5;
+        }
+      }
+
+      & .rightContent {
+        & .pageMenu {
+          & .homePageSelect {
+            color: #e4eef5;
+
+            & svg path {
+              stroke: #e4eef5;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include desktop {
+    & .header {
+      width: 1230px;
+    }
+  }
+
+  @include laptop {
+    & .header {
+      width: 980px;
+
+      & .leftContent {
+        gap: 38px;
+      }
+
+      & .rightContent {
+        gap: 22px;
+      }
+    }
+  }
+
+  @include tablet {
+    & .header {
+      width: 720px;
+      padding: 0 10px;
+
+      & .leftContent {
+        gap: 18px;
+
+        & .navigation {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    & .header {
+      width: 320px;
+      height: 40px;
+
+      & .leftContent {
+        gap: 0;
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      & .rightContent {
+        display: none;
+      }
+    }
+  }
+}
