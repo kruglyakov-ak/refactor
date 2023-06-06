@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { Manrope } from 'next/font/google'
 import 'shared/styles/globals.scss'
 
-import variables from 'shared/styles/theme/colors.module.scss'
+import colors from 'shared/styles/theme/colors.module.scss'
 
 const manrope = Manrope({
   subsets: ['latin', 'cyrillic'],
@@ -21,11 +21,11 @@ export const metadata: Metadata = {
   icons: [{ rel: 'icon', url: '/favicon.ico' }],
   themeColor: [
     {
-      color: variables.darkBgSecondary,
+      color: colors.darkBgSecondary,
       media: 'prefers-color-scheme: dark',
     },
     {
-      color: variables.lightBgSecondary,
+      color: colors.lightBgSecondary,
       media: 'prefers-color-scheme: light',
     },
   ],
