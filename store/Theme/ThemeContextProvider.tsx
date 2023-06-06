@@ -1,13 +1,12 @@
-import { ReactElement, useEffect, useState } from 'react'
+import { FC, ReactNode, useEffect, useState } from 'react'
 import ThemeContext from './ThemeContext'
+import { COLOR_THEME } from 'shared/constants'
 
 interface ThemePropsInterface {
-  children?: JSX.Element | Array<JSX.Element>
+  children: ReactNode
 }
 
-export const ThemeContextProvider = ({
-  children,
-}: ThemePropsInterface): ReactElement => {
+export const ThemeContextProvider: FC<ThemePropsInterface> = ({ children }) => {
   const [isDarkTheme, setIsDarkTheme] = useState(true)
 
   const isLocalStorageEmpty = (): boolean => {
@@ -17,15 +16,15 @@ export const ThemeContextProvider = ({
   const initialThemeHandler = (): void => {
     if (isLocalStorageEmpty()) {
       localStorage.setItem('isDarkTheme', `true`)
-      document.documentElement.classList.add('dark')
+      document.documentElement.classList.add(COLOR_THEME.DARK)
       setIsDarkTheme(true)
     } else {
       const isDarkTheme: boolean = JSON.parse(
         localStorage.getItem('isDarkTheme')!
       )
       isDarkTheme
-        ? document.documentElement.classList.add('dark')
-        : document.documentElement.classList.add('light')
+        ? document.documentElement.classList.add(COLOR_THEME.DARK)
+        : document.documentElement.classList.add(COLOR_THEME.LIGHT)
       setIsDarkTheme(() => {
         return isDarkTheme
       })
@@ -35,8 +34,8 @@ export const ThemeContextProvider = ({
   useEffect(() => initialThemeHandler())
 
   const toggleDarkClassToRoot = (): void => {
-    document.documentElement.classList.toggle('dark')
-    document.documentElement.classList.toggle('light')
+    document.documentElement.classList.toggle(COLOR_THEME.DARK)
+    document.documentElement.classList.toggle(COLOR_THEME.LIGHT)
   }
 
   const setValueToLocalStorage = (): void => {
