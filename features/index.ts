@@ -1,3 +1,3 @@
-import { MainLogo } from './MainLogo/MainLogo'
+import { LandingHeader } from './LandingHeader/LandingHeader'
 
-export { MainLogo }
+export { LandingHeader }

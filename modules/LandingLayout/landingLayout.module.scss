@@ -1,5 +1,10 @@
 @use 'shared/styles' as *;
 
 .main {
+  min-height: 100vh;
+  background-color: var(--color-bg-secondary);
 
+  & .title {
+    font-size: $fs-h3;
+  }
 }
