@@ -1,0 +1,9 @@
+.listItem {
+  & .link {
+    &.active {
+      color: var(--color-text-hover);
+      pointer-events: none;
+    }
+  }
+}
+
