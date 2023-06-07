@@ -17,8 +17,10 @@ export const LandingHeader: FC<ILandingHeaderProps> = ({ className }) => {
 
   return (
     <Header className={cn(s.header, className)}>
-      {pathname !== APP_ROUTER_PATHS.MAIN && <MainLogo className={s.logo} />}
-      <LandingNavigation />
+      <div className={s.leftContent}>
+        {pathname !== APP_ROUTER_PATHS.MAIN && <MainLogo className={s.logo} />}
+        <LandingNavigation />
+      </div>
     </Header>
   )
 }
