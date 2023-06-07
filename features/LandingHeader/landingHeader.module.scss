@@ -1,10 +1,24 @@
 @use 'shared/styles' as *;
 
 .header {
+  display: flex;
+  align-items: center;
+  
+  & .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   & .leftContent {
     display: flex;
     align-items: center;
     gap: 90px;
+  }
+
+  & .rightContent {
+    display: flex;
+    align-items: center;
   }
 }
 

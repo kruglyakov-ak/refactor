@@ -3,7 +3,7 @@ import cn from 'classnames'
 import { usePathname } from 'next/navigation'
 import { LandingNavigation } from 'features'
 
-import { Header, MainLogo, ThemeButton } from 'components'
+import { Container, Header, MainLogo, ThemeButton } from 'components'
 
 import s from './landingHeader.module.scss'
 import { APP_ROUTER_PATHS } from 'shared/constants'
@@ -17,11 +17,18 @@ export const LandingHeader: FC<ILandingHeaderProps> = ({ className }) => {
 
   return (
     <Header className={cn(s.header, className)}>
-      <div className={s.leftContent}>
-        {pathname !== APP_ROUTER_PATHS.MAIN && <MainLogo className={s.logo} />}
-        <LandingNavigation />
-      </div>
-      <ThemeButton />
+      <Container className={s.container}>
+        <div className={s.leftContent}>
+          {pathname !== APP_ROUTER_PATHS.MAIN && (
+            <MainLogo className={s.logo} />
+          )}
+          <LandingNavigation />
+        </div>
+
+        <div className={s.rightContent}>
+          <ThemeButton />
+        </div>
+      </Container>
     </Header>
   )
 }
