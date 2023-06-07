@@ -9,8 +9,9 @@ interface ICustomLinkProps extends LinkProps {
   className?: string
 }
 
-export const CustomLink: FC<ICustomLinkProps> = (props) => {
+export const CustomLink: FC<ICustomLinkProps & LinkProps> = (props) => {
   const { children, className } = props
+  
   return (
     <Link
       className={cn(s.link, className)}
