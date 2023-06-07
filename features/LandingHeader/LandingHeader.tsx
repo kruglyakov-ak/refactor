@@ -3,10 +3,17 @@ import cn from 'classnames'
 import { usePathname } from 'next/navigation'
 import { LandingNavigation } from 'features'
 
-import { Container, Header, MainLogo, ThemeButton } from 'components'
+import {
+  Container,
+  Header,
+  MainLogo,
+  RegistrationButton,
+  ThemeButton,
+} from 'components'
+
+import { APP_ROUTER_PATHS } from 'shared/constants'
 
 import s from './landingHeader.module.scss'
-import { APP_ROUTER_PATHS } from 'shared/constants'
 
 interface ILandingHeaderProps {
   className?: string
@@ -26,6 +33,7 @@ export const LandingHeader: FC<ILandingHeaderProps> = ({ className }) => {
         </div>
 
         <div className={s.rightContent}>
+          <RegistrationButton />
           <ThemeButton />
         </div>
       </Container>
