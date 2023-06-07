@@ -1,6 +1,8 @@
 import { FC } from 'react'
 import cn from 'classnames'
 
+import { LandingNavigation } from 'features'
+
 import { Header, MainLogo } from 'components'
 
 import s from './landingHeader.module.scss'
@@ -13,6 +15,8 @@ export const LandingHeader: FC<ILandingHeaderProps> = ({ className }) => {
   return (
     <Header className={cn(s.header, className)}>
       <MainLogo className={s.logo} />
+      <LandingNavigation />
     </Header>
   )
 }
+

@@ -1,3 +1,4 @@
 import { LandingHeader } from './LandingHeader/LandingHeader'
+import { LandingNavigation } from './LandingNavigation/LandingNavigation'
 
-export { LandingHeader }
+export { LandingHeader, LandingNavigation }

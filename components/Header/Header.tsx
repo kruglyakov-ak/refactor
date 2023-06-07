@@ -13,7 +13,8 @@ interface IHeaderProps {
 export const Header: FC<IHeaderProps> = ({ children, className }) => {
   return (
     <header className={cn(s.header, className)}>
-      <Container>{children}</Container>
+      <Container className={s.container}>{children}</Container>
     </header>
   )
 }
+

@@ -2,6 +2,8 @@
   &.dark {
     --color-text: #e4eef5;
     --color-text-secondary: #8ea0ae;
+    --color-text-hover: #ff8b78;
+    --color-text-active: #52e5ee;
 
     --color-bg-primary: #173a54;
     --color-bg-secondary: #081324;
@@ -14,6 +16,8 @@
   &.light {
     --color-text: #4c728f;
     --color-text-secondary: #6b8d98;
+    --color-text-hover: #fc7159;
+    --color-text-active: #2ea9c5;
 
     --color-bg-primary: #ffffff;
     --color-bg-secondary: #e3eaeb;
