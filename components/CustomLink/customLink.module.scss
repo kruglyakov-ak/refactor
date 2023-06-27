@@ -1,6 +1,7 @@
 .link {
   outline: 0;
   font-size: 1em;
+  display: inline-block;
 
   @media (hover: hover) {
     &:hover,

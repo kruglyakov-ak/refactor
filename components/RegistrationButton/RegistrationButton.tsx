@@ -1,14 +1,19 @@
-import { CustomLink } from 'components/CustomLink/CustomLink'
 import { FC, MouseEvent } from 'react'
 
-export const RegistrationButton: FC = () => {
+import { CustomLink } from 'components'
+
+interface IRegistrationButtonProps {
+  className?: string
+}
+
+export const RegistrationButton: FC<IRegistrationButtonProps> = ({className}) => {
   const clickHandler = (evt: MouseEvent<HTMLAnchorElement>) => {
     evt.preventDefault()
   }
-  
+
   return (
     <CustomLink
-      href={'/strategies'}
+      href={''}
       onClick={clickHandler}
     >
       Registration

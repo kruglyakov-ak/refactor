@@ -1,13 +1,13 @@
 import { FC } from 'react'
 import cn from 'classnames'
 import { usePathname } from 'next/navigation'
-import { LandingNavigation } from 'features'
+
+import { LandingNavigation, UserMenu } from 'features'
 
 import {
   Container,
   Header,
   MainLogo,
-  RegistrationButton,
   ThemeButton,
 } from 'components'
 
@@ -33,11 +33,10 @@ export const LandingHeader: FC<ILandingHeaderProps> = ({ className }) => {
         </div>
 
         <div className={s.rightContent}>
-          <RegistrationButton />
+          <UserMenu className={s.userMenu}/>
           <ThemeButton />
         </div>
       </Container>
     </Header>
   )
 }
-
