@@ -1,23 +1,11 @@
 @use 'shared/styles' as *;
 
 .container {
-  max-width: 1530px;
+  max-width: 1570px;
   width: 100%;
   min-width: 320px;
-  padding: 0 10px;
+  padding: 0 35px;
   margin: 0 auto;
-
-  @include desktop {
-    padding: 0 210px;
-  }
-
-  @include laptop {
-    padding: 0 37px;
-  }
-
-  @include tablet {
-    padding: 0 34px;
-  }
 
   @include mobile {
     padding: 0 10px;

@@ -7,6 +7,7 @@ import { LandingNavigation, UserMenu } from 'features'
 import {
   Container,
   Header,
+  LocalSelect,
   MainLogo,
   ThemeButton,
 } from 'components'
@@ -33,7 +34,8 @@ export const LandingHeader: FC<ILandingHeaderProps> = ({ className }) => {
         </div>
 
         <div className={s.rightContent}>
-          <UserMenu className={s.userMenu}/>
+          <UserMenu className={s.userMenu} />
+          <LocalSelect className={s.localSelect} />
           <ThemeButton />
         </div>
       </Container>
