@@ -1,3 +1,5 @@
+@use 'shared/styles' as *;
+
 .button {
   display: flex;
   align-items: center;
@@ -7,9 +9,11 @@
   color: var(--color-text-button);
   font-weight: 700;
   line-height: inherit;
-  padding: 7px 14px;
+  padding: 0 15px;
   border-radius: 4px;
   cursor: pointer;
+  white-space: nowrap;
+  height: 42px;
 
   @media (hover: hover) {
     &:hover,
@@ -27,5 +31,11 @@
     background-color: var(--color-button-disabled);
     color: var(--color-text-button-secondary);
     cursor: auto;
+  }
+
+  @include tablet {
+    height: 36px;
+    padding: 0 10px; 
+    font-size: $fs-p3;
   }
 }
