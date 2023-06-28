@@ -8,9 +8,6 @@ interface IContainerProps {
   className?: string
 }
 
-export const Container: FC<IContainerProps> = ({
-  children,
-  className,
-}) => {
+export const Container: FC<IContainerProps> = ({ children, className }) => {
   return <div className={cn(s.container, className)}>{children}</div>
 }

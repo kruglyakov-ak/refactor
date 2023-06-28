@@ -15,7 +15,7 @@ export const LoginButton: FC<ILoginButtonProps> = ({ className }) => {
     <Button
       className={className}
       onClick={clickHandler}
-      href='login'
+      href="login"
     >
       Log in
     </Button>

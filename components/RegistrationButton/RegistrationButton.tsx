@@ -6,7 +6,9 @@ interface IRegistrationButtonProps {
   className?: string
 }
 
-export const RegistrationButton: FC<IRegistrationButtonProps> = ({className}) => {
+export const RegistrationButton: FC<IRegistrationButtonProps> = ({
+  className,
+}) => {
   const clickHandler = (evt: MouseEvent<HTMLAnchorElement>) => {
     evt.preventDefault()
   }

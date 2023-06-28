@@ -23,6 +23,5 @@ export {
   RegistrationButton,
   LoginButton,
   Select,
-  LocalSelect
+  LocalSelect,
 }
-

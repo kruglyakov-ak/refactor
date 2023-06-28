@@ -10,4 +10,3 @@ interface ProvidersProps {
 export const Providers: FC<ProvidersProps> = ({ children }) => {
   return <ThemeContextProvider>{children}</ThemeContextProvider>
 }
-

@@ -30,4 +30,3 @@ export const NavigationItem: FC<INavigationItem> = ({
     </li>
   )
 }
-

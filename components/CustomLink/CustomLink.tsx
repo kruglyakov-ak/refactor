@@ -11,7 +11,7 @@ interface ICustomLinkProps extends LinkProps {
 
 export const CustomLink: FC<ICustomLinkProps & LinkProps> = (props) => {
   const { children, className } = props
-  
+
   return (
     <Link
       className={cn(s.link, className)}
@@ -21,4 +21,3 @@ export const CustomLink: FC<ICustomLinkProps & LinkProps> = (props) => {
     </Link>
   )
 }
-

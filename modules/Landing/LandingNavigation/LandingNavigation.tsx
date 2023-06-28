@@ -29,4 +29,3 @@ export const LandingNavigation: FC<ILandingNavigationProps> = ({
     </nav>
   )
 }
-

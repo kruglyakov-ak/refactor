@@ -59,4 +59,3 @@ export const ThemeContextProvider: FC<ThemePropsInterface> = ({ children }) => {
     </ThemeContext.Provider>
   )
 }
-
