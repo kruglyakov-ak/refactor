@@ -1,5 +1,3 @@
-import { LandingHeader } from './LandingHeader/LandingHeader'
-import { LandingNavigation } from './LandingNavigation/LandingNavigation'
-import { UserMenu } from './UserMenu/UserMenu'
+import { AuthUserMenu } from './AuthUserMenu/AuthUserMenu'
 
-export { LandingHeader, LandingNavigation, UserMenu }
+export { AuthUserMenu }

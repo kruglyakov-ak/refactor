@@ -1,10 +1,11 @@
 import { FC } from 'react'
 import cn from 'classnames'
 
+import { NavigationItem } from 'components'
+
 import { LANDING_NAV_ITEMS } from 'shared/constants'
 
 import s from './landingNavigation.module.scss'
-import { NavigationItem } from 'components'
 
 interface ILandingNavigationProps {
   className?: string

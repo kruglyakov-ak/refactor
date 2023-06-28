@@ -2,7 +2,7 @@
 
 import { FC, ReactNode } from 'react'
 
-import { LandingHeader } from 'features'
+import { LandingHeader } from '..'
 
 import s from './landingLayout.module.scss'
 

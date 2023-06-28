@@ -2,7 +2,7 @@ import { FC } from 'react'
 import cn from 'classnames'
 import { usePathname } from 'next/navigation'
 
-import { LandingNavigation, UserMenu } from 'features'
+import { AuthUserMenu } from 'features'
 
 import {
   Container,
@@ -13,6 +13,8 @@ import {
 } from 'components'
 
 import { APP_ROUTER_PATHS } from 'shared/constants'
+
+import { LandingNavigation } from '..'
 
 import s from './landingHeader.module.scss'
 
@@ -34,7 +36,7 @@ export const LandingHeader: FC<ILandingHeaderProps> = ({ className }) => {
         </div>
 
         <div className={s.rightContent}>
-          <UserMenu className={s.userMenu} />
+          <AuthUserMenu className={s.userMenu} />
           <LocalSelect className={s.localSelect} />
           <ThemeButton />
         </div>

@@ -3,13 +3,13 @@ import cn from 'classnames'
 
 import { LoginButton, RegistrationButton } from 'components'
 
-import s from './userMenu.module.scss'
+import s from './authUserMenu.module.scss'
 
-interface IUserMenuProps {
+interface IAuthUserMenuProps {
   className?: string
 }
 
-export const UserMenu: FC<IUserMenuProps> = ({ className }) => {
+export const AuthUserMenu: FC<IAuthUserMenuProps> = ({ className }) => {
   return (
     <div className={cn(s.userMenu, className)}>
       <RegistrationButton />
