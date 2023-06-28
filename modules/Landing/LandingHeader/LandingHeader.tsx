@@ -4,13 +4,9 @@ import { usePathname } from 'next/navigation'
 
 import { AuthUserMenu } from 'features'
 
-import {
-  Container,
-  Header,
-  LocalSelect,
-  MainLogo,
-  ThemeButton,
-} from 'components'
+import { LocalSelect, ThemeButton } from 'features'
+
+import { Container, Header, MainLogo } from 'components'
 
 import { APP_ROUTER_PATHS } from 'shared/constants'
 

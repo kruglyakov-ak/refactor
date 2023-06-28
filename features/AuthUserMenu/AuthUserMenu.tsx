@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import cn from 'classnames'
 
-import { LoginButton, RegistrationButton } from 'components'
+import { LoginButton, RegistrationButton } from 'features'
 
 import s from './authUserMenu.module.scss'
 
