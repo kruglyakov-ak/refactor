@@ -10,7 +10,7 @@ import { Container, Header, MainLogo } from 'components'
 
 import { APP_ROUTER_PATHS } from 'shared/constants'
 
-import { LandingNavigation } from '..'
+import { LandingNavigation } from 'features'
 
 import s from './landingHeader.module.scss'
 
