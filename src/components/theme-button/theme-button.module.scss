@@ -1,0 +1,60 @@
+.button {
+  border: none;
+  border-radius: 500px;
+  padding: 0 4px;
+  background-color: var(--color-button-theme);
+  width: 68px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+
+  & .iconWrapper {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: ease-in-out 0.8s;
+
+    &.dark {
+      background-color: transparent;
+
+      & .moonIcon {
+        & path {
+          fill: var(--color-icon-active);
+        }
+      }
+    }
+
+    &.light {
+      background-color: var(--color-button-opacity-hover);
+
+      & .sunIcon {
+        & path {
+          fill: var(--color-icon-hover);
+        }
+      }
+    }
+  }
+
+  &.darkMode {
+    & .iconWrapper {
+      &.dark {
+        background-color: var(--color-button-opacity);
+      }
+
+      &.light {
+        background-color: transparent;
+
+        & .sunIcon {
+          & path {
+            fill: var(--color-border);
+          }
+        }
+      }
+    }
+  }
+}

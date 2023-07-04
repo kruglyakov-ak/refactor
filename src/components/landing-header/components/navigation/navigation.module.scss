@@ -1,0 +1,10 @@
+.navigation {
+  width: fit-content;
+
+  & .navigationList {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+}

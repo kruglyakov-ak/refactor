@@ -1,0 +1,21 @@
+.option {
+  width: 100%;
+
+  & .button {
+    width: 100%;
+    cursor: pointer;
+    padding: 0;
+    text-align: start;
+    color: var(--color-text);
+    border: none;
+    background: none;
+    font-weight: 500;
+
+    @media (hover: hover) {
+      &:hover,
+      &:focus {
+        color: var(--color-text-hover);
+      }
+    }
+  }
+}

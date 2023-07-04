@@ -1,5 +1,4 @@
 /** @type {import('next').NextConfig} */
-
 const nextConfig = {
   webpack(config) {
     // Grab the existing rule that handles SVG imports
@@ -28,7 +27,6 @@ const nextConfig = {
 
     return config
   },
-
   reactStrictMode: true,
   swcMinify: true,
 }

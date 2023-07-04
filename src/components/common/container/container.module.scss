@@ -1,0 +1,13 @@
+@use 'shared/styles' as *;
+
+.container {
+  max-width: 1570px;
+  width: 100%;
+  min-width: 320px;
+  padding: 0 35px;
+  margin: 0 auto;
+
+  @include mobile {
+    padding: 0 10px;
+  }
+}
